@@ -9,7 +9,7 @@
       `(("ksp"			
 	 (,default-directory :default "index")
 	 (:base "html" :path ,(concat default-directory "html")))))
-(setq muse-html-style-sheet "<link rel=\"stylesheet\" type=\"text/css\" href=\"debianmeeting.css\">")
+(setq muse-html-style-sheet "<link rel=\"stylesheet\" type=\"text/css\" href=\"style.css\">")
 
 (setq muse-html-header
       (concat 
