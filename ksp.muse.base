@@ -103,7 +103,7 @@ gpg --armor --export-options export-clean,export-minimal --export "自身の鍵I
 
 ** 事前配布物の確認
 <lisp>fix_year</lisp>年<lisp>fix_month</lisp>月<lisp>fix_day</lisp>日(日) 23時59分 の締め切り後、翌日朝までに 
-[[<lisp>ksp_txt</lisp>][鍵一覧用ファイル]] ([[ksp_hash_txt][鍵一覧用ファイルハッシュ値]], [[ksp_singed_txt][コーディネイターによる署名ファイル]])
+[[<lisp>ksp_txt</lisp>][鍵一覧用ファイル]] ([[<lisp>ksp_hash_txt</lisp>][鍵一覧用ファイルハッシュ値]], [[<lisp>ksp_singed_txt</lisp>][コーディネイターによる署名ファイル]])
 がアップロードされます。 
 鍵一覧用ファイルにあるあなたの鍵のフィンガープリントが正しいかどうか照合してください。
 さらに、ファイルの SHA256 ハッシュ値を計算してください。 たとえば sha256sum　コマンドを使って次のように求められます。
