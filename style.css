@@ -1,0 +1,54 @@
+body {
+    margin: auto;
+    width: 90%;
+}
+
+h1, h2, h3 {
+    font-family: Times, "Times New Roman", sans-serif; 
+}
+
+h1{
+  border-width: 2px 0px 2px 0px;
+  border-style: solid none solid none;
+  border-color: #00F;
+  text-align: center;
+}
+
+h2{
+  border-left: #9999ff 0.2em solid;
+  padding-left: 0.3em;
+  border-bottom: #0099ff 2px solid;
+}
+
+p {
+    margin: 1em auto;
+    line-height: 120%;
+    text-indent: 1em;
+}
+
+pre {
+    margin: 0.5em 2em;
+    padding: 0.5em;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+table {
+    margin-left: 1em;
+    background-color: lightgray;
+}
+
+td, th {
+    padding: 0.3em;
+}
+
+td {
+    background-color: white;
+}
+
+strong, em{
+  font-weight: bold;
+  font-size: 100%;
+  color: #ff0000;
+  font-style: normal;
+}
