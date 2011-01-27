@@ -10,7 +10,7 @@
 <lisp>(progn (setq semi_year 2011) (setq semi_month 03) (setq semi_day 05) (setq semi_hour 10) (setq semi_min 15) "") </lisp>
 <lisp>(progn (setq semi_title "PGP/GPGキーサイン説明およびPGP/GPGキーサインパーティ") (setq semi_url "http://www.ospn.jp/osc2011-spring/modules/eguide/event.php?eid=60") "") </lisp>
 ; 鍵受付時間
-<lisp>(progn (setq fix_year 2011) (setq fix_month 02) (setq fix_day 27) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "土") "")</lisp>
+<lisp>(progn (setq fix_year 2011) (setq fix_month 02) (setq fix_day 27) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "日") "")</lisp>
 ; キーサインデータ
 <lisp>(progn (setq ksp_coordinator "岩松 信洋") (setq ksp_coordinator_mail "iwamatsu at {nigauri.org}") "")</lisp>
 <lisp>(progn (setq ksp_txt "osc2011-tokyo-spring-ksp.txt") (setq ksp_hash_txt "osc2011-tokyo-spring-ksp.txt.sha256") (setq ksp_singed_txt "osc2011-tokyo-spring-ksp.txt.sha256.asc") "")</lisp>
@@ -88,14 +88,14 @@ gpg --armor --export-options export-clean,export-minimal --export "自身の鍵I
 </example>
 
 というAscii形式で出力したものをそのまま貼り付けてください。 
-[[http://groups.google.co.jp/group/ksp-ja/web/gpg%E5%85%AC%E9%96%8B%E9%8D%B5%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB][サンプル]] のようなものが出力されているはずです。
+[[signed-gpg-key-sample.html][サンプル]] のようなものが出力されているはずです。
 
 コマンドラインが使えない環境の方は、別途コーディネイタにご相談ください。
 
 ** 当日の飛び込み参加できます？
 飛び込み参加は基本的には ***推奨しません*** 。できる限り、参加希望者は ***<lisp>fix_year</lisp>年<lisp>fix_month</lisp>月<lisp>fix_day</lisp>日 (<lisp>fix_dow</lisp>) <lisp>fix_hour</lisp>時<lisp>fix_min</lisp>分*** までに登録を完了してください。 
 どうしても参加したい方は、名前、鍵、メールアドレス、 フィンガープリントが書かれた紙を用意して参加してください。 
-なおこの紙は、キーサインパーティーで確認をする際に、 相手に1枚ずつ配っていただきますので、それなりの数をご用意ください。作成方法は、[[http://groups.google.com/group/ksp-ja/web/%E3%82%AD%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%B3%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9][キーサイン用データの作り方]] を参照してください。
+なおこの紙は、キーサインパーティーで確認をする際に相手に1枚ずつ配っていただきますので、それなりの数をご用意ください。作成方法は、[[create-keysign-data.html][キーサイン用データの作り方]] を参照してください。
 
 ----
 
