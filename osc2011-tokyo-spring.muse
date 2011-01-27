@@ -12,7 +12,7 @@
 ; 鍵受付時間
 <lisp>(progn (setq fix_year 2011) (setq fix_month 02) (setq fix_day 27) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "土") "")</lisp>
 ; キーサインデータ
-<lisp>(progn (setq ksp_coordinator "岩松 信洋") (setq ksp_coordinator_mail "iwamatsu@nigauri.org") "")</lisp>
+<lisp>(progn (setq ksp_coordinator "岩松 信洋") (setq ksp_coordinator_mail "iwamatsu at {nigauri.org}") "")</lisp>
 <lisp>(progn (setq ksp_txt "osc2011-tokyo-spring-ksp.txt") (setq ksp_hash_txt "osc2011-tokyo-spring-ksp.txt.sha256") (setq ksp_singed_txt "osc2011-tokyo-spring-ksp.txt.sha256.asc") "")</lisp>
 
 ; ここからメイン
@@ -30,7 +30,7 @@
 ** 開催日時・会場
  - 日時: <lisp>semi_year</lisp> 年 <lisp>semi_month</lisp> 月 <lisp>semi_day</lisp> 日 (土) <lisp>semi_hour</lisp>時<lisp>semi_min</lisp>分
  - 会場: [[<lisp>event_place_url</lisp>][<lisp>event_place</lisp>]]
- - キーサインコーディネイタ: <lisp>ksp_coordinator</lisp> <lisp>ksp_coordinator_mail</lisp>
+ - キーサインコーディネイタ: <lisp>ksp_coordinator</lisp> / <lisp>ksp_coordinator_mail</lisp>
 
 ** 内容
 今回のキーサインパーティは、一斉に事務的に行うのではなく、 相手と軽く会話をしながらお互いのIDとPGP/GPG フィンガープリントを確認するという方法で行います。
