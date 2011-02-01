@@ -145,5 +145,6 @@ $ gpg --print-md sha256 osc2011-tokyo-spring-ksp.txt
 
 ----
 
-* GPG鍵の作り方
-[[create-gpgkey.html][GnuPG鍵の作り方]]を参考にしてください。4096R の鍵の作り方になっています。
+* GnuPG鍵の作り方
+ - [[create-gpgkey.html][GnuPG鍵の作り方]]を参考にしてください。4096R の鍵の作り方になっています。
+ - 既に GnuPG 鍵を持っており、4096/RSA に更新したい人は [[create-gpgkey-4096r.html][4096/RSA 鍵 の追加方法]] を参照してください。
