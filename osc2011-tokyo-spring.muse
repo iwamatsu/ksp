@@ -7,7 +7,7 @@
 ; イベント開催場所
 <lisp>(progn (setq event_place "早稲田大学（西早稲田キャンパス63号館、61号)") (setq event_place_url "http://www.waseda.jp/jp/campus/okubo.html") "") </lisp>
 ; セミナー情報
-<lisp>(progn (setq semi_year 2011) (setq semi_month 03) (setq semi_day 05) (setq semi_hour 10) (setq semi_min 15) "") </lisp>
+<lisp>(progn (setq semi_year 2011) (setq semi_month 03) (setq semi_day 05) (setq semi_hour 10) (setq semi_min 00) "") </lisp>
 <lisp>(progn (setq semi_title "PGP/GPGキーサイン説明およびPGP/GPGキーサインパーティ") (setq semi_url "http://www.ospn.jp/osc2011-spring/modules/eguide/event.php?eid=60") "") </lisp>
 ; 鍵受付時間
 <lisp>(progn (setq fix_year 2011) (setq fix_month 02) (setq fix_day 27) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "日") "")</lisp>
@@ -43,6 +43,8 @@
 ソフトウェアの入手時の正当性確認の意味でも重要です。 そして、[[http://www.debian.org/][Debian]]、[[http://www.ubuntu.com][Ubuntu]]、[[http://www.centos.org/][CentOS]]などでは、パッケージリポジトリの正当性を確認するために、
 PGP/GPG を使ったシステムが採用されています。 この信頼性は Web of Trust に基づいているため、Web of Trust の中で各ディストリビューションのリポジトリ管理者とつながることが重要です。 
 これらのディストリビューションをお使いのユーザは参加することをお勧めします。
+そして、[[http://ja.wikipedia.org/wiki/DNS_Security_Extensions][DNSSEC]] の署名の確認にもPGP/GPG が必要です。DNSSEC の署名に利用されている公開鍵の確認と信頼を行うにもキーサインは必要に
+なってくると思われます。本キーサインパーティを機会に Web of Trust に参加してみてはいかがでしょうか。
 
 ----
 
