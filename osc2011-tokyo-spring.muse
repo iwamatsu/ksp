@@ -23,6 +23,7 @@
 キーサインパーティーは PGP/GPG 鍵を利用する上で非常に重要な概念である、信頼の輪 ([[http://en.wikipedia.org/wiki/Web_of_trust][Web of Trust]])を
 大規模に拡張するのに有用です。 また、このようなキーサインパーティーは実際に開発者と面と向かって会う良い機会でもあります。
 
+***キーサインの登録は締め切りました。***
 ----
 
 * 開催概要
@@ -54,6 +55,7 @@ PGP/GPG を使ったシステムが採用されています。 この信頼性�
 公開鍵を登録前に _~/.gnupg/gpg.conf_ に以下の内容があるか、確認してください。
 
 <example>
+digest-algo sha256
 personal-digest-preferences SHA256
 cert-digest-algo SHA256
 default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
