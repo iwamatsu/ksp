@@ -7,12 +7,12 @@
 ; イベント開催場所
 <lisp>(progn (setq event_place "早稲田大学（西早稲田キャンパス63号館、61号)") (setq event_place_url "http://www.waseda.jp/jp/campus/okubo.html") "") </lisp>
 ; セミナー情報
-<lisp>(progn (setq semi_year 2011) (setq semi_month 03) (setq semi_day 05) (setq semi_hour 10) (setq semi_min 15) "") </lisp>
+<lisp>(progn (setq semi_year 2011) (setq semi_month 03) (setq semi_day 05) (setq semi_hour 10) (setq semi_min 00) "") </lisp>
 <lisp>(progn (setq semi_title "PGP/GPGキーサイン説明およびPGP/GPGキーサインパーティ") (setq semi_url "http://www.ospn.jp/osc2011-spring/modules/eguide/event.php?eid=60") "") </lisp>
 ; 鍵受付時間
-<lisp>(progn (setq fix_year 2011) (setq fix_month 02) (setq fix_day 27) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "土") "")</lisp>
+<lisp>(progn (setq fix_year 2011) (setq fix_month 02) (setq fix_day 27) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "日") "")</lisp>
 ; キーサインデータ
-<lisp>(progn (setq ksp_coordinator "岩松 信洋") (setq ksp_coordinator_mail "iwamatsu@nigauri.org") "")</lisp>
+<lisp>(progn (setq ksp_coordinator "岩松 信洋") (setq ksp_coordinator_mail "iwamatsu at {nigauri.org}") "")</lisp>
 <lisp>(progn (setq ksp_txt "osc2011-tokyo-spring-ksp.txt") (setq ksp_hash_txt "osc2011-tokyo-spring-ksp.txt.sha256") (setq ksp_singed_txt "osc2011-tokyo-spring-ksp.txt.sha256.asc") "")</lisp>
 
 ; ここからメイン
@@ -30,7 +30,7 @@
 ** 開催日時・会場
  - 日時: <lisp>semi_year</lisp> 年 <lisp>semi_month</lisp> 月 <lisp>semi_day</lisp> 日 (土) <lisp>semi_hour</lisp>時<lisp>semi_min</lisp>分
  - 会場: [[<lisp>event_place_url</lisp>][<lisp>event_place</lisp>]]
- - キーサインコーディネイタ: <lisp>ksp_coordinator</lisp> <lisp>ksp_coordinator_mail</lisp>
+ - キーサインコーディネイタ: <lisp>ksp_coordinator</lisp> / <lisp>ksp_coordinator_mail</lisp>
 
 ** 内容
 今回のキーサインパーティは、一斉に事務的に行うのではなく、 相手と軽く会話をしながらお互いのIDとPGP/GPG フィンガープリントを確認するという方法で行います。
@@ -43,6 +43,8 @@
 ソフトウェアの入手時の正当性確認の意味でも重要です。 そして、[[http://www.debian.org/][Debian]]、[[http://www.ubuntu.com][Ubuntu]]、[[http://www.centos.org/][CentOS]]などでは、パッケージリポジトリの正当性を確認するために、
 PGP/GPG を使ったシステムが採用されています。 この信頼性は Web of Trust に基づいているため、Web of Trust の中で各ディストリビューションのリポジトリ管理者とつながることが重要です。 
 これらのディストリビューションをお使いのユーザは参加することをお勧めします。
+そして、[[http://ja.wikipedia.org/wiki/DNS_Security_Extensions][DNSSEC]] の署名の確認にもPGP/GPG が必要です。DNSSEC の署名に利用されている公開鍵の確認と信頼を行うにもキーサインは必要に
+なってくると思われます。本キーサインパーティを機会に Web of Trust に参加してみてはいかがでしょうか。
 
 ----
 
@@ -52,6 +54,7 @@ PGP/GPG を使ったシステムが採用されています。 この信頼性�
 公開鍵を登録前に _~/.gnupg/gpg.conf_ に以下の内容があるか、確認してください。
 
 <example>
+digest-algo sha256
 personal-digest-preferences SHA256
 cert-digest-algo SHA256
 default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB BZIP2 ZIP Uncompressed
@@ -65,8 +68,9 @@ $ gpg --armor --export-options export-clean,export-minimal --export "自身の�
 
 鍵の登録後、登録データに問題が無ければコーディネーターが[[ack-list.html][参加者の一覧]]に登録します。 このリストに乗った時点で登録完了とします。
 なお、登録作業から24時間経過しても、コーディネーターからの連絡も無く、 かつ参加者の一覧にも掲載が無い方は、コーディネーターまでご連絡ください。 
-PGP/GPG 鍵について、利用されているハッシュのうちSHA-1の脆弱性が大きくクローズアップされています。 このため、今回のキーサインパーティーでは、より強い
-暗号を持ったPGP/ GPG鍵に限定します。 まだ、4096/RSA以上の暗号を持った鍵を持っていない方は、 4096/RSAの鍵を作成し、 その鍵を利用してキーサインパーティーに参加してください。 
+PGP/GPG 鍵について、利用されているハッシュのうちSHA-1の脆弱性が大きくクローズアップされています。 このため、今回のキーサインパーティーではより強い
+暗号を持ったPGP/ GPG鍵を推奨します。 
+昔からPGP/GPGを利用されている方は、まだ1024/DSAをお使いだと思います。2048/RSA以上鍵を作成し、その鍵を利用してキーサインパーティーに参加してください。 
 コーディネータがあなたの鍵を確認したら、確認メッセージをメールで送信します。 もし、メッセージに書かれている情報が間違っている場合、すぐにご連絡ください。 
 正常に受け付けられた鍵と参加者の一覧については [[ack-list.html][確認用参加者の一覧ページ]]をそちらを確認してください。
 
@@ -88,14 +92,14 @@ gpg --armor --export-options export-clean,export-minimal --export "自身の鍵I
 </example>
 
 というAscii形式で出力したものをそのまま貼り付けてください。 
-[[http://groups.google.co.jp/group/ksp-ja/web/gpg%E5%85%AC%E9%96%8B%E9%8D%B5%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB][サンプル]] のようなものが出力されているはずです。
+[[signed-gpg-key-sample.html][サンプル]] のようなものが出力されているはずです。
 
 コマンドラインが使えない環境の方は、別途コーディネイタにご相談ください。
 
 ** 当日の飛び込み参加できます？
 飛び込み参加は基本的には ***推奨しません*** 。できる限り、参加希望者は ***<lisp>fix_year</lisp>年<lisp>fix_month</lisp>月<lisp>fix_day</lisp>日 (<lisp>fix_dow</lisp>) <lisp>fix_hour</lisp>時<lisp>fix_min</lisp>分*** までに登録を完了してください。 
 どうしても参加したい方は、名前、鍵、メールアドレス、 フィンガープリントが書かれた紙を用意して参加してください。 
-なおこの紙は、キーサインパーティーで確認をする際に、 相手に1枚ずつ配っていただきますので、それなりの数をご用意ください。作成方法は、[[http://groups.google.com/group/ksp-ja/web/%E3%82%AD%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%B3%E7%94%A8%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BD%9C%E3%82%8A%E6%96%B9][キーサイン用データの作り方]] を参照してください。
+なおこの紙は、キーサインパーティーで確認をする際に相手に1枚ずつ配っていただきますので、それなりの数をご用意ください。作成方法は、[[create-keysign-data.html][キーサイン用データの作り方]] を参照してください。
 
 ----
 
@@ -143,5 +147,6 @@ $ gpg --print-md sha256 osc2011-tokyo-spring-ksp.txt
 
 ----
 
-* GPG鍵の作り方
-[[http://groups.google.com/group/ksp-ja/web/gnupg][GnuPG鍵の作り方]]を参考にしてください。4096Rの鍵の作り方になっています。
+* GnuPG鍵の作り方
+ - [[create-gpgkey.html][GnuPG鍵の作り方]]を参考にしてください。4096R の鍵の作り方になっています。
+ - 既に GnuPG 鍵を持っており、4096/RSA に更新したい人は [[create-gpgkey-4096r.html][4096/RSA 鍵 の追加方法]] を参照してください。
