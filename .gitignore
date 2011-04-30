@@ -1,0 +1,5 @@
+html
+*~
+*.swp
+*.bak
+*.elc
