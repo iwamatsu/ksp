@@ -7,13 +7,13 @@
 ; イベント開催場所
 <lisp>(progn (setq event_place "明星大学 28号館 ") (setq event_place_url "http://www.meisei-u.ac.jp/access/hinomap/index.html") "") </lisp>
 ; セミナー情報
-<lisp>(progn (setq semi_year 2011) (setq semi_month 11) (setq semi_day 18) (setq semi_hour 23) (setq semi_min 59) "") </lisp>
+<lisp>(progn (setq semi_year 2011) (setq semi_month 11) (setq semi_day 19) (setq semi_hour 10) (setq semi_min 00) "") </lisp>
 <lisp>(progn (setq semi_title "PGP/GPGキーサイン説明およびPGP/GPGキーサインパーティ") (setq semi_url "") "") </lisp>
 ; 鍵受付時間
-<lisp>(progn (setq fix_year 2011) (setq fix_month 02) (setq fix_day 27) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "日") "")</lisp>
+<lisp>(progn (setq fix_year 2011) (setq fix_month 11) (setq fix_day 17) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "日") "")</lisp>
 ; キーサインデータ
 <lisp>(progn (setq ksp_coordinator "岩松 信洋") (setq ksp_coordinator_mail "iwamatsu at {debian.org}") "")</lisp>
-<lisp>(progn (setq ksp_txt "osc2011-tokyo-fall-ksp.txt") (setq ksp_hash_txt "osc2011-tokyo-fall-ksp.txt.sha256") (setq ksp_singed_txt "osc2011-tokyo-fall-ksp.txt.sha256.asc") "")</lisp>
+<lisp>(progn (setq ksp_txt "http://www.nigauri.org/ksp/osc2011-tokyo-fall/osc2011-tokyo-fall-ksp.txt") (setq ksp_hash_txt "http://www.nigauri.org/ksp/osc2011-tokyo-fall/osc2011-tokyo-fall-ksp.txt.sha256") (setq ksp_singed_txt "http://www.nigauri.org/ksp/osc2011-tokyo-fall/osc2011-tokyo-fall-ksp.txt.sha256.asc") "")</lisp>
 
 ; ここからメイン
 
@@ -50,7 +50,7 @@ PGP/GPG を使ったシステムが採用されています。 この信頼性�
 
 * 参加方法と注意事項
 参加希望者は<lisp>fix_year</lisp>年<lisp>fix_month</lisp>月<lisp>fix_day</lisp>日
-(<lisp>fix_dow</lisp>) <lisp>fix_hour</lisp>時<lisp>fix_min</lisp>分 までに、 キーサインに使用する自分の公開鍵を [[ksp.cgi][登録サイト]]から登録してください。
+(<lisp>fix_dow</lisp>) <lisp>fix_hour</lisp>時<lisp>fix_min</lisp>分 までに、 キーサインに使用する自分の公開鍵を [[http://www.nigauri.org/ksp/osc2011-tokyo-fall/ksp.cgi][登録サイト]]から登録してください。
 公開鍵を登録前に _~/.gnupg/gpg.conf_ に以下の内容があるか、確認してください。
 
 <example>
