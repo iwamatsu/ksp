@@ -8,7 +8,7 @@
 <lisp>(progn (setq event_place "大阪南港ATC ITM棟 10F") (setq event_place_url "http://k-of.jp/2011/access.html") "") </lisp>
 ; セミナー情報
 <lisp>(progn (setq semi_year 2011) (setq semi_month 11) (setq semi_day 12) (setq semi_hour 11) (setq semi_min 35) "") </lisp>
-<lisp>(progn (setq semi_title "PGP/GPGキーサイン説明およびPGP/GPGキーサインパーティ") (setq semi_url "") "") </lisp>
+<lisp>(progn (setq semi_title "GPG キーサインパーティ") (setq semi_url "") "") </lisp>
 ; 鍵受付時間
 <lisp>(progn (setq fix_year 2011) (setq fix_month 11) (setq fix_day 10) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "木") "")</lisp>
 ; キーサインデータ
@@ -128,7 +128,7 @@ $ gpg --print-md sha256 kof2011-ksp.txt
 
 * 当日の流れ
 
- 1. 本キーサインパーティは[[<lisp>event_url</lisp>][<lisp>event_title</lisp>]] の [[<lisp>semi_url</lisp>][<lisp>semi_title</lisp>]] で行ないます。参加予定者は <lisp>event_title</lisp> から参加登録してください。
+ 1. 本キーサインパーティは[[<lisp>event_url</lisp>][<lisp>event_title</lisp>]] の <lisp>semi_title</lisp> で行ないます。参加予定者は ステージ前にあつまってください。
  2. 当日、コーディネーターが用意したスライドに SHA256 ハッシュ値が表示されます。 このハッシュ値とあなたの計算したものが合致していることを確認します。 これで、全参加者が同じ鍵リストに基いての参加であることを保証できます。
  3. 会場で皆さんが集合したところで、コーディネーターがファイルのSHA256ハッシュ値が、 全員同じであることを尋ね、全参加者が同じリストを持っていることを確認します。 この確認の際に、印刷物の各ページに照合した旨のチェックをつけておいてください。
 
