@@ -66,13 +66,13 @@ default-preference-list SHA512 SHA384 SHA256 SHA224 AES256 AES192 AES CAST5 ZLIB
 $ gpg --armor --export-options export-clean,export-minimal --export "自身の鍵ID" | gpg --local-user "自身の鍵ID" --clearsign
 </example>
 
-鍵の登録後、登録データに問題が無ければコーディネーターが[[ack-list.html][参加者の一覧]]に登録します。 このリストに乗った時点で登録完了とします。
+鍵の登録後、登録データに問題が無ければコーディネーターが[[http://www.nigauri.org/ksp/osc2011-tokyo-fall/ack-list.html][参加者の一覧]]に登録します。 このリストに乗った時点で登録完了とします。
 なお、登録作業から24時間経過しても、コーディネーターからの連絡も無く、 かつ参加者の一覧にも掲載が無い方は、コーディネーターまでご連絡ください。
 PGP/GPG 鍵について、利用されているハッシュのうちSHA-1の脆弱性が大きくクローズアップされています。 このため、今回のキーサインパーティーではより強い
 暗号を持ったPGP/ GPG鍵を推奨します。
 昔からPGP/GPGを利用されている方は、まだ1024/DSAをお使いだと思います。2048/RSA以上鍵を作成し、その鍵を利用してキーサインパーティーに参加してください。
 コーディネータがあなたの鍵を確認したら、確認メッセージをメールで送信します。 もし、メッセージに書かれている情報が間違っている場合、すぐにご連絡ください。
-正常に受け付けられた鍵と参加者の一覧については [[ack-list.html][確認用参加者の一覧ページ]]をそちらを確認してください。
+正常に受け付けられた鍵と参加者の一覧については [[http://www.nigauri.org/ksp/osc2011-tokyo-fall/ack-list.html][確認用参加者の一覧ページ]]をそちらを確認してください。
 
 ----
 
@@ -85,7 +85,7 @@ PGP/GPG 鍵について、利用されているハッシュのうちSHA-1の脆�
 パーティーは「Len Sassaman の効果的なグループキーサイン方式」を使って進めます。 これは、皆さんが知っているやり方よりもいくぶん早くキーサインできる手順です。
 
 ** 登録用データの作成方法はどうすればよいですか？
-[[ksp.cgi][参加登録用ウェブページ]] から登録する PGP/GPG 鍵の情報については、
+[[http://www.nigauri.org/ksp/osc2011-tokyo-fall/ksp.cgi][参加登録用ウェブページ]] から登録する PGP/GPG 鍵の情報については、
 
 <example>
 gpg --armor --export-options export-clean,export-minimal --export "自身の鍵ID" | gpg --local-user "自身の鍵ID" --clearsign
