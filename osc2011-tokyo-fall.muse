@@ -8,9 +8,9 @@
 <lisp>(progn (setq event_place "明星大学 28号館 ") (setq event_place_url "http://www.meisei-u.ac.jp/access/hinomap/index.html") "") </lisp>
 ; セミナー情報
 <lisp>(progn (setq semi_year 2011) (setq semi_month 11) (setq semi_day 19) (setq semi_hour 10) (setq semi_min 00) "") </lisp>
-<lisp>(progn (setq semi_title "PGP/GPGキーサイン説明およびPGP/GPGキーサインパーティ") (setq semi_url "") "") </lisp>
+<lisp>(progn (setq semi_title "GPGキーサインパーティおよびCAcertサイン") (setq semi_url "//www.ospn.jp/osc2011-fall/modules/eguide/event.php?eid=27") "") </lisp>
 ; 鍵受付時間
-<lisp>(progn (setq fix_year 2011) (setq fix_month 11) (setq fix_day 17) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "日") "")</lisp>
+<lisp>(progn (setq fix_year 2011) (setq fix_month 11) (setq fix_day 17) (setq fix_hour 23) (setq fix_min 59) (setq fix_dow "木") "")</lisp>
 ; キーサインデータ
 <lisp>(progn (setq ksp_coordinator "岩松 信洋") (setq ksp_coordinator_mail "iwamatsu at {debian.org}") "")</lisp>
 <lisp>(progn (setq ksp_txt "http://www.nigauri.org/ksp/osc2011-tokyo-fall/osc2011-tokyo-fall-ksp.txt") (setq ksp_hash_txt "http://www.nigauri.org/ksp/osc2011-tokyo-fall/osc2011-tokyo-fall-ksp.txt.sha256") (setq ksp_singed_txt "http://www.nigauri.org/ksp/osc2011-tokyo-fall/osc2011-tokyo-fall-ksp.txt.sha256.asc") "")</lisp>
@@ -106,7 +106,7 @@ gpg --armor --export-options export-clean,export-minimal --export "自身の鍵I
 * 登録後の当日までの流れ
 
 ** 事前配布物の確認
-<lisp>fix_year</lisp>年<lisp>fix_month</lisp>月<lisp>fix_day</lisp>日(日) 23時59分 の締め切り後、翌日朝までに
+<lisp>fix_year</lisp>年<lisp>fix_month</lisp>月<lisp>fix_day</lisp>日(<list>setq fix_dow</lisp>) 23時59分 の締め切り後、翌日朝までに
 [[<lisp>ksp_txt</lisp>][鍵一覧用ファイル]] ([[<lisp>ksp_hash_txt</lisp>][鍵一覧用ファイルハッシュ値]], [[<lisp>ksp_singed_txt</lisp>][コーディネイターによる署名ファイル]])
 がアップロードされます。
 鍵一覧用ファイルにあるあなたの鍵のフィンガープリントが正しいかどうか照合してください。
